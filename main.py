@@ -23,6 +23,7 @@ def start(inv):
             print('The door is locked. You will need a key.')
             time.sleep(2)
             start()
+
     elif choice == '2':
         os.system('clear')
         print('You open the mailbox and find a hard drive.')
@@ -43,6 +44,33 @@ def start(inv):
             print('\nYou leave the hard drive and close the mailbox.')
             time.sleep(2)
             start()
+
+    elif choice == '3':
+        os.system('clear')
+        print('\nThere is a key under the mat; so cliche.')
+        time.sleep(1)
+        print('What do you want to do?')
+        print('\n1: Take the key.')
+        print('2: Put the mat back.')
+
+        selection_list = ['1', '2']
+        choice = select_choice(selection_list)
+
+        if choice == '1':
+            inv.append('key')
+            print('\nYou take the key and put the mat back.')
+            time.sleep(2)
+            start()
+        elif choice = '2'
+            print('\nYou leave the key and put the mat back.')
+            time.sleep(2)
+            start()
+
+    elif choice == '4':
+        os.system('clear')
+        print('\nAs you look through the window, you see that no one is inside.')
+        print('You see a computer on a desk.')
+        time.sleep(2)
 
 
 def select_choice(selection_list):
