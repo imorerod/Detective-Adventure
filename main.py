@@ -43,7 +43,7 @@ def start(inv):
         elif choice = '2'
             print('\nYou leave the hard drive and close the mailbox.')
             time.sleep(2)
-            start()
+            start(inv)
 
     elif choice == '3':
         os.system('clear')
@@ -64,13 +64,43 @@ def start(inv):
         elif choice = '2'
             print('\nYou leave the key and put the mat back.')
             time.sleep(2)
-            start()
+            start(inv)
 
     elif choice == '4':
         os.system('clear')
         print('\nAs you look through the window, you see that no one is inside.')
         print('You see a computer on a desk.')
         time.sleep(2)
+        start(inv)
+
+
+def inside(inv):
+    print('\nYou are inside the house.')
+    print('You go to the computer sitting on the desk.')
+    time.sleep(1)
+    print('What do you want to do?')
+    print('\nTurn on the computer.')
+    print('Leave the house.')
+
+    selection_list = ['1', '2']
+    choice = select_choice(selection_list)
+
+    if choice == '1':
+        if 'hard drive' in inv:
+            print('\nThe computer is booting...')
+            print('On the screen appears a message: 'Good job! Thank you for playing.'')
+            exit(0)
+            # new_function(inv)
+        else:
+            print('The computer is not booting.')
+            time.sleep(2)
+            start()
+
+    elif choice == '2':
+        os.system('clear')
+        print('You leave the house.')
+        time.sleep(2)
+        start(inv)
 
 
 def select_choice(selection_list):
@@ -82,10 +112,6 @@ def select_choice(selection_list):
     else:
         print('Invalid answer.')
         return select_choice(selection_list)
-
-
-def inside(inv):
-    print('\nYou are inside the house.')
 
 
 os.system('clear')
