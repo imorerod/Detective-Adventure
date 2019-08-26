@@ -22,7 +22,7 @@ def start(inv):
             os.system('clear')
             print('The door is locked. You will need a key.')
             time.sleep(2)
-            start()
+            start(inv)
 
     elif choice == '2':
         os.system('clear')
@@ -40,7 +40,7 @@ def start(inv):
             print('\nYou take the hard drive and close the mailbox.')
             time.sleep(2)
             start()
-        elif choice = '2'
+        elif choice == '2':
             print('\nYou leave the hard drive and close the mailbox.')
             time.sleep(2)
             start(inv)
@@ -60,8 +60,8 @@ def start(inv):
             inv.append('key')
             print('\nYou take the key and put the mat back.')
             time.sleep(2)
-            start()
-        elif choice = '2'
+            start(inv)
+        elif choice == '2':
             print('\nYou leave the key and put the mat back.')
             time.sleep(2)
             start(inv)
@@ -79,8 +79,8 @@ def inside(inv):
     print('You go to the computer sitting on the desk.')
     time.sleep(1)
     print('What do you want to do?')
-    print('\nTurn on the computer.')
-    print('Leave the house.')
+    print('\n1: Turn on the computer.')
+    print('2: Leave the house.')
 
     selection_list = ['1', '2']
     choice = select_choice(selection_list)
@@ -88,13 +88,13 @@ def inside(inv):
     if choice == '1':
         if 'hard drive' in inv:
             print('\nThe computer is booting...')
-            print('On the screen appears a message: 'Good job! Thank you for playing.'')
+            print("On the screen appears a message: 'Good job! Thank you for playing.'")
             exit(0)
             # new_function(inv)
         else:
-            print('The computer is not booting.')
+            print('The computer is not booting...')
             time.sleep(2)
-            start()
+            start(inv)
 
     elif choice == '2':
         os.system('clear')
